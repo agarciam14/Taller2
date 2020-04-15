@@ -15,7 +15,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from Ultrasonic import views as Ultrasonic_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', Ultrasonic_views.Ultrasonic, name='Ultrasonic'),
 ]
