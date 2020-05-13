@@ -2,12 +2,15 @@
 {% block content %}
 <div class="container">
     <form method="get">
-        <input type="number" name="value">
+        <input type="number" name="distance" placeholder="distancia">
+        <input type="number" name="lat" step="any" placeholder="latitud">
+        <input type="number" name="lng" step="any" placeholder="longitud">
+        <input type="number" name="area" step="any" placeholder="area">
         <button type="submit">Adicionar</button>
     </form>
     {% for ultrasonic in ultrasonics %}
     <ul class="list-group">
-        <li class="list-group-item">{{ultrasonic.id}} = {{ultrasonic.value}}</li>
+        <li class="list-group-item">distancia = {{ultrasonic.distance}}, coordenadas: <{{ultrasonic.lat}},{{ultrasonic.lng}}>, area: {{ultrasonic.area}}</li>
     </ul>
     {% endfor %}
 </div>
